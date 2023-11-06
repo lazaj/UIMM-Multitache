@@ -1,4 +1,4 @@
-all: threads.2a threads.2b threads.2b-bloc threads.3a threads.3b
+all: threads.2a threads.2b threads.2b-bloc threads.3a threads.3b semaphores.2d
 
 threads.2a: threads.2a.c
 	gcc -o $@ $< -lpthread -D_REENTRANT -D_GNU_SOURCE
@@ -15,5 +15,8 @@ threads.3a: threads.3a.c
 threads.3b: threads.3b.c
 	gcc -o $@ $< -lpthread -D_REENTRANT -D_GNU_SOURCE
 
+semaphores.2d: semaphores.2d.c
+	gcc -o $@ $< -lpthread -D_REENTRANT -D_GNU_SOURCE
+
 clean:
-	rm -f threads.2a threads.2b threads.2b-bloc threads.3a threads.3b *~
+	rm -f threads.2a threads.2b threads.2b-bloc threads.3a threads.3b semaphores.2d *~
